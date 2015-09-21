@@ -30,9 +30,5 @@ get_header(); ?>
 		</article>
 	</div>
 
-	<div class="palco colunas-04">
-		<?php dynamic_sidebar( 'sidebar' ); ?>
-	</div>
-
 </section>
 <?php get_footer(); ?>

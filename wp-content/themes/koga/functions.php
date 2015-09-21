@@ -4,6 +4,8 @@
 	* @subpackage Coletiva_Theme
 */
 
+add_filter('show_admin_bar', '__return_false');
+
 /* Páginas de administração */
 
 function crirar_menu_personalizacoes() {
@@ -322,195 +324,12 @@ add_filter( 'widget_text', 'do_shortcode' );
 
 /* Post types */
 
-function type_produto() {
-	register_post_type( 'produto',
 
-		array(
-
-			'public'					=> true,
-			'has_archive'				=> true,
-			'menu_position'				=> 6,
-			// 'menu_icon'					=> get_bloginfo( 'template_directory' ) . '/images/admin-produto.png',
-
-			'labels'					=> array(
-				'name'					=> 'Produtos',
-				'singular_name'			=> 'Produto',
-				'menu_name'				=> 'Produtos',
-				'all_items'				=> 'Todos os produtos',
-				'add_new'				=> 'Adicionar novo',
-				'add_new_item'			=> 'Adicionar novo produto',
-				'edit_item'				=> 'Editar produto',
-				'new_item'				=> 'Novo produto',
-				'view_item'				=> 'Visualizar produto',
-				'search_items'			=> 'Buscar produtos',
-				'not_found'				=> 'Nenhum produto encontrado',
-				'not_found_in_trash'	=> 'Nenhum produto na lixeira',
-				'parent_item_colon'		=> ''
-			),
-
-			'rewrite'					=> array(
-				'slug'					=> 'produto',
-				'with_front'			=> true
-			),
-
-			'supports'					=> array(
-				'title',
-				'author',
-				'editor',
-				// 'excerpt',
-				'thumbnail',
-				'revisions',
-				// 'custom-fields',
-				// 'comments'
-			)
-		)
-	);
-}
-add_action( 'init', 'type_produto' );
-
-function type_marca() {
-	register_post_type( 'marca',
-
-		array(
-
-			'public'					=> false,
-			'exclude_from_search'		=> true,
-			'publicly_queryable'		=> true,
-			'show_ui'					=> true,
-			'show_in_nav_menus'			=> false,
-			'has_archive'				=> false,
-			'menu_position'				=> 7,
-			// 'menu_icon'					=> get_bloginfo( 'template_directory' ) . '/images/admin-marca.png',
-
-			'labels'					=> array(
-				'name'					=> 'Marcas',
-				'singular_name'			=> 'Marca',
-				'menu_name'				=> 'Marcas',
-				'all_items'				=> 'Todas as marcas',
-				'add_new'				=> 'Adicionar nova',
-				'add_new_item'			=> 'Adicionar nova marca',
-				'edit_item'				=> 'Editar marca',
-				'new_item'				=> 'Nova marca',
-				'view_item'				=> 'Visualizar marca',
-				'search_items'			=> 'Buscar marcas',
-				'not_found'				=> 'Nenhuma marca encontrada',
-				'not_found_in_trash'	=> 'Nenhuma marca na lixeira',
-				'parent_item_colon'		=> ''
-			),
-
-			'rewrite'					=> array(
-				'slug'					=> 'marca',
-				'with_front'			=> true
-			),
-
-			'supports'					=> array(
-				'title',
-				// 'author',
-				// 'editor',
-				// 'excerpt',
-				'thumbnail',
-				'revisions',
-				// 'custom-fields',
-				// 'comments'
-			)
-		)
-	);
-}
-add_action( 'init', 'type_marca' );
-
-/* Taxonomias */
-
-// function categoriza_setor() {
-// 	register_taxonomy(
-// 		'setor',
-// 		'produto',
-
-// 		array(
-// 			'label'								=> 'Setor',
-// 			'hierarchical'						=> true,
-// 			'show_admin_column'					=> true,
-
-// 			'labels'							=> array(
-// 				'singular_name'					=> 'Setor',
-// 				'all_items'						=> 'Todos os setores',
-// 				'edit_item'						=> 'Editar setor',
-// 				'view_item'						=> 'Ver setor',
-// 				'update_item'					=> 'Atualizar setor',
-// 				'add_new_item'					=> 'Adicionar setor',
-// 				'new_item_name'					=> 'Novo nome de setor',
-// 				'parent_item'					=> 'Setor pai',
-// 				'parent_item_colon'				=> 'Setor pai:',
-// 				'search_items'					=> 'Buscar setores',
-// 				'popular_items'					=> '',
-// 				'separate_items_with_commas'	=> '',
-// 				'add_or_remove_items'			=> '',
-// 				'choose_from_most_used'			=> '',
-// 				'not_found'						=> ''
-// 			),
-
-// 			'rewrite'							=> array(
-// 				'slug'							=> 'setores',
-// 				'with_front'					=> true,
-// 				'hierarchical'					=> true
-// 			),
-
-// 			'capabilities'						=> array(
-// 				'manage_categories',
-// 				'edit_posts'
-// 			)
-// 		)
-// 	);
-// }
-// add_action( 'init', 'categoriza_setor' );
-
-// function categoriza_cartao() {
-// 	register_taxonomy(
-// 		'cartao',
-// 		'produto',
-
-// 		array(
-// 			'label'								=> 'Cartões',
-// 			'hierarchical'						=> false,
-// 			'show_admin_column'					=> true,
-
-// 			'labels'							=> array(
-// 				'singular_name'					=> 'Cartão',
-// 				'all_items'						=> 'Todos os cartões',
-// 				'edit_item'						=> 'Editar cartão',
-// 				'view_item'						=> 'Ver cartão',
-// 				'update_item'					=> 'Atualizar cartão',
-// 				'add_new_item'					=> 'Adicionar cartão',
-// 				'new_item_name'					=> 'Novo nome de cartão',
-// 				'parent_item'					=> '',
-// 				'parent_item_colon'				=> '',
-// 				'search_items'					=> 'Buscar cartões',
-// 				'popular_items'					=> 'Cartões mais usados',
-// 				'separate_items_with_commas'	=> 'Separe os cartões com vírgulas',
-// 				'add_or_remove_items'			=> 'Adicionar ou remover cartões',
-// 				'choose_from_most_used'			=> 'Escolha entre os cartões mais usados',
-// 				'not_found'						=> 'Nenhum cartão encontrado'
-// 			),
-
-// 			'rewrite'							=> array(
-// 				'slug'							=> 'cartoes'
-// 			),
-
-// 			'capabilities'						=> array(
-// 				'manage_terms',
-// 				'edit_terms',
-// 				'delete_terms',
-// 				'assign_terms'
-// 			)
-// 		)
-// 	);
-// }
-// add_action( 'init', 'categoriza_cartao' );
 
 /* Relaciona Post types e Taxonomias */
 
 function relaciona_type_taxonomia() {
 	register_taxonomy_for_object_type( 'category', 'page' );
-	register_taxonomy_for_object_type( 'category', 'produto' );
 }
 add_action( 'init', 'relaciona_type_taxonomia', 500 );
 
@@ -1159,6 +978,48 @@ function listar_horarios_agrupados() {
 function motrar_id_taxonomia( $nome, $tax ) {
 	$segmento = get_term_by( 'name', $nome, $tax );
 	return $segmento->term_id;
+}
+
+function listar_lojas() {
+	$destaque = new WP_Query( array(
+		'order_by'			=> 'date',
+		'order'				=> 'ASC',
+		'post_type'			=> 'lojas',
+		'posts_per_page'	=> 6
+	) );
+
+	if( $destaque->have_posts() ) {
+		echo '<ul class="content-lojas">';
+			while( $destaque->have_posts() ) {
+				$destaque->the_post();
+				$rua		= types_render_field("rua", array("raw"=>"true","separator"=>";"));
+				$cidade		= types_render_field("cidade", array("raw"=>"true","separator"=>";"));
+				$telefone	= types_render_field("telefone", array("raw"=>"true","separator"=>";"));
+				$fax		= types_render_field("fax", array("raw"=>"true","separator"=>";"));
+				$cnpj		= types_render_field("cnpj", array("raw"=>"true","separator"=>";"));
+				$gerente	= types_render_field("gerente", array("raw"=>"true","separator"=>";"));
+				$email		= types_render_field("email", array("raw"=>"true","separator"=>";"));
+
+				echo '<li class="loja palco colunas-04">';
+					echo '<a href="#" class="rubrik">';
+						echo '<h3>' . get_the_title() . '</h3>';
+						if ($rua)		echo '<p>' . $rua . '</p>';
+						if ($cidade)	echo '<p>' . $cidade . '</p>';
+						if ($telefone)	echo '<p>Telefone: ' . $telefone . '</p>';
+						if ($fax)		echo '<p>Fax: ' . $fax . '</p>';
+						if ($cnpj)		echo '<p>CNPJ: ' . $cnpj . '</p>';
+						if ($gerente)	echo '<p>Gerente: ' . $gerente . '</p>';
+						if ($email)		echo '<p>E-mail: ' . $email . '</p>';
+					echo '</a>';
+				echo '</li>';
+			}
+		echo '</ul>';
+	}
+	else {
+		echo '<p class="erro">Desculpe, nenhuma loja cadastrada.</p>';
+	}
+
+	wp_reset_postdata();
 }
 
 ?>

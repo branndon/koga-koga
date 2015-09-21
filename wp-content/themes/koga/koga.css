@@ -1,0 +1,282 @@
+/* Fontes */
+	/* Rubrik > Light */
+	@font-face {
+	    font-family: 'rubrik_light';
+	    src: url('fontes/rubrik-light/rubrik_light-webfont.eot');
+	    src: url('fontes/rubrik-light/rubrik_light-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('fontes/rubrik-light/rubrik_light-webfont.woff2') format('woff2'),
+	         url('fontes/rubrik-light/rubrik_light-webfont.woff') format('woff'),
+	         url('fontes/rubrik-light/rubrik_light-webfont.ttf') format('truetype'),
+	         url('fontes/rubrik-light/rubrik_light-webfont.svg#rubrik_light') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+
+	/* Rubrik */
+	@font-face {
+	    font-family: 'rubrik';
+	    src: url('fontes/rubrik/rubrik-webfont.eot');
+	    src: url('fontes/rubrik/rubrik-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('fontes/rubrik/rubrik-webfont.woff2') format('woff2'),
+	         url('fontes/rubrik/rubrik-webfont.woff') format('woff'),
+	         url('fontes/rubrik/rubrik-webfont.ttf') format('truetype'),
+	         url('fontes/rubrik/rubrik-webfont.svg#rubrik') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+
+	/* Rubrik > Bold */
+	@font-face {
+	    font-family: 'rubrik_bold';
+	    src: url('fontes/rubrik-bold/rubrik_bold-webfont.eot');
+	    src: url('fontes/rubrik-bold/rubrik_bold-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('fontes/rubrik-bold/rubrik_bold-webfont.woff2') format('woff2'),
+	         url('fontes/rubrik-bold/rubrik_bold-webfont.woff') format('woff'),
+	         url('fontes/rubrik-bold/rubrik_bold-webfont.ttf') format('truetype'),
+	         url('fontes/rubrik-bold/rubrik_bold-webfont.svg#rubrik_bold') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+
+/* Default */
+.floatRight { float: right; }
+.hidden { display: none; }
+.rubrik { font-family: 'rubrik'; }
+.rubrik_light { font-family: 'rubrik_light'; }
+.rubrik_bold { font-family: 'rubrik_bold'; }
+
+	/* Bgs */
+	.red-bg { background: #e61111; }
+	.black-bg { background: #000000; }
+	.gray-bg { background: #e8e8e8; }
+
+
+/* Header */
+header { background: #e61111; border-bottom: 6px solid #b30d0d; padding: 30px 0; }
+	
+	/* logo */
+	header #logo { width: 297px; }
+
+	/* Menu */
+	.main-menu { position: absolute; }
+	.main-menu li { float: left; list-style: none; display: block; position: relative; padding-top: 20px;}
+	.main-menu li a { color: #FFFFFF; font-family: Calibri; font-size: 16px; font-weight: bold; text-decoration: none; text-transform: uppercase; padding: 10px 20px; }
+
+	.main-menu li:before,
+	.main-menu li:after { border: 1px solid #b30d0d; content: ' '; min-height: 107px; position: absolute; top: 0; left: 0; }
+	.main-menu li:after { border-color: #f15e5e; left: 2px; }
+
+	.main-menu li:first-child:after,
+	.main-menu li:first-child:before { display: none; }
+
+	.main-menu li a .icon { display: inline-block; width: 25px; height: 25px; background: white; margin-right: 20px; vertical-align: middle; }
+	.main-menu li a .icon.oleo { background: url(images/icons/icon-oleo.png) no-repeat; }
+	.main-menu li a .icon.servicos { background: url(images/icons/icon-servicos.png) no-repeat; }
+	.main-menu li a .icon.lojas { background: url(images/icons/icon-lojas.png) no-repeat; }
+
+	/* Menu > Icon */
+	.menu { float: right; }
+	.menu a { color: #FFFFFF; text-decoration: none; display: block; background: #0e578f; padding: 15px; margin-top: 10px; }
+
+	/* Menu > right */
+	.content-menu {}
+	.content-menu ul { float: left; width: 100%; }
+	.content-menu ul li { display: block; width: 100%; position: relative; }
+	.content-menu ul li a { color: #FFFFFF; text-decoration: none; padding: 35px; display: block; text-transform: uppercase; }
+	.content-menu ul li a:before { color: #1c4e73; content: '■'; margin-right: 35px; }
+
+	.content-menu ul li:after { border: 1px solid #0c4b7e; content: ' '; height: 1px; position: absolute; bottom: 0; width: 100%; }
+	.content-menu ul li:before { border: 1px solid #206397; content: ' '; height: 1px; position: absolute; top: 0; width: 100%; }
+
+		/* Title */
+		.content-menu .content-header { width: 100%; }
+		.content-menu .content-header .middle { float: left; display: inline-block; padding: 50px 30px; width: 50%; box-sizing: border-box; }
+
+			/* Search */
+			.content-menu .content-header .content-search { background: #0c4c7c; }
+
+			/* Close */
+			.content-menu .content-header .content-close { background: #0b426b; }
+			.content-menu .content-header .content-close .close-menu { cursor: pointer; }
+
+/* Home */
+	
+	/* Slider */
+	.content-slider { height: 848px; }
+	.content-slider .bxslider { margin-top: 0; }
+	.content-slider .bxslider li { min-height: 848px; }
+
+		/* Description */
+		.content-slider .bxslider li .subtitle { background: rgba(0, 0, 0, 0.60); border-bottom: 10px solid #dedede; display: inline-block; padding: 80px 40px; max-width: 430px; margin-top: 170px; }
+		.content-slider .bxslider li .subtitle:before { display: none; }
+		.content-slider .bxslider li .subtitle p { font-size: 22px; color: #ffffff; font-style: lighter; line-height: 27px; }
+		.content-slider .bxslider li .subtitle h2 { font-size: 27px; color: #e61111; text-transform: uppercase; }
+
+	/* Fix btns */
+	.fix-btns { max-width: 55px; position: fixed; right: 0; z-index: 9999; }
+	.fix-btns ul {}
+	.fix-btns ul li { background: #e61111; list-style: none; }
+	.fix-btns ul li:before { display: none; }
+	.fix-btns ul li a { display: block; padding: 20px; color: #FFFFFF; text-decoration: none; }
+	.fix-btns ul li:hover a { padding-right: 100px; }
+
+	/* Serviços */
+	.content-servicos { position: relative; min-height: 791px; background: url(images/carrosell-servicos.jpg) repeat-x center bottom #e61111; }
+	.content-servicos .title { padding-top: 170px; color: #FFFFFF; text-transform: uppercase; font-size: 27px; margin-top: 0; }
+
+		/* NOSSAS LOJAS || TROCA DE GRÁTIS || RECARGA COMPUTADORIZADA */
+		.content-servicos .servicos { position: absolute; top: -100px; }
+		.content-servicos .servicos ul { margin-top: 0; }
+		.content-servicos .servicos ul li { margin-left: 1px; margin-top: 0; position: relative; min-width: 330px; }
+		.content-servicos .servicos ul li:before { display: none; }
+		.content-servicos .servicos ul li .description { position: absolute; top: 60px; text-align: center; padding: 0 40px; }
+		.content-servicos .servicos ul li .description p { color: #FFFFFF; text-align: center; }
+		.content-servicos .servicos ul li .description h2 { color: #FFFFFF; text-transform: uppercase; }
+
+		/* Conheça nossos serviços */
+		.content-servicos .content-instalacao { margin-top: 70px; }
+		.content-servicos .content-instalacao .item { margin-left: 0; width: 50%; min-height: 377px; }
+		.content-servicos .content-instalacao .item .space { padding: 40px 70px; }
+		.content-servicos .content-instalacao .item p { color: #FFFFFF; font-size: 14px; font-family: Arial; }
+		.content-servicos .content-instalacao .item h2 { font-size: 30px; color: #FFFFFF; text-transform: uppercase; line-height: 35px; }
+		.content-servicos .content-instalacao .item .btn { font-family: Arial; color: #e61111; font-size: 14px; display: inline-block; padding: 20px 40px; border: 1px solid #e61111; margin-top: 40px; text-decoration: none;text-transform: uppercase; font-weight: bold; }
+		.content-servicos .content-instalacao .item .btn:hover { background: #e61111; color: #FFFFFF; }
+
+	/* Na mídia */
+	.content-na-midia { border-bottom: 10px solid #FFFFFF; padding-bottom: 100px; position: relative; }
+	.content-na-midia h2 { font-size: 27px; margin-top: 0; text-transform: uppercase; padding-top: 70px; }
+	.content-na-midia:after { content: ' '; position: absolute; bottom: -25px; background: url(images/icons/icon-expandir.png) no-repeat center bottom; width: 53px; height: 53px; left: 50%; z-index: 9999; }
+	.content-na-midia .content-itens { margin-top: 65px; }
+	.content-na-midia .item { position: relative; margin-left: 1px; margin-top: 0; }
+	.content-na-midia .item:before { display: none; }
+	.content-na-midia .item img { display: block; }
+
+		/* Itens normal */
+		.content-na-midia .item { max-width: 245px; min-height: 487px; }
+		.content-na-midia .item .description { text-align: right; position: absolute; bottom: 0; }
+		.content-na-midia .item .description a { text-decoration: none; padding: 40px 0 40px 40px; display: block; }
+		.content-na-midia .item .description p { color: #e61111; margin-top: 0; text-align: right; font-size: 16px; }
+		.content-na-midia .item .description h3 { color: #000000; font-weight: bold; font-size: 16px; margin-top: 0; }
+
+		/* Featured */
+		.content-na-midia .item.featured { min-width: 495px; max-height: 487px; }
+		.content-na-midia .item.featured .description { position: absolute; background: rgba(0, 0, 0, 0.60); bottom: 0; text-align: right; }
+		.content-na-midia .item.featured a { padding: 40px 100px; }
+		.content-na-midia .item.featured .description p { color: #e61111; margin-top: 0; text-align: right; }
+		.content-na-midia .item.featured .description h3 { color: #FFFFFF; margin-top: 0; }
+
+/* Footer */
+footer { position: relative; min-height: 1000px; }
+
+	/* Map + Lojas */
+
+		/* Navigation */
+		footer .nav-footer { background: #FFFFFF; position: absolute; top: 0; max-width: 990px; }
+		footer .nav-footer .space { padding: 40px; display: inline-block; }
+
+			/* text */
+			footer .nav-footer .text { width: 570px; float: left; }
+			footer .nav-footer .text h3 { text-transform: uppercase; color: #000000; font-size: 25px; font-weight: normal; margin-top: 20px; }
+
+			/* listagem */
+			footer .nav-footer .listagem { width: 340px; float: left; }
+			footer .nav-footer .listagem a { font-size: 18px; color: #e61111; display: inline-block; padding: 20px; }
+			footer .nav-footer .listagem a:hover,
+			footer .nav-footer .listagem a.active { background: #e61111; color: #FFFFFF; text-decoration: none; }
+
+		/* Lojas */
+		footer .content-lojas { padding-top: 140px; }
+		footer .content-lojas .loja { border: 1px solid #cd0f0f; margin-left: 0; min-width: 328px; list-style: none }
+		footer .content-lojas .loja:before { display: none; }
+		footer .content-lojas .loja a { padding: 90px 70px; display: block; }
+		footer .content-lojas .loja a p { margin-top: 0; color: #ffffff; }
+		footer .content-lojas .loja a h3 { font-size: 18px; color: #000000; margin-bottom: 25px; }
+
+			/* Active */
+			footer .content-lojas .loja.active { background: #000000; border-color: #000000; }
+			footer .content-lojas .loja.active a h3 { color: #e61111; }
+
+			/* Hover */
+			footer .content-lojas .loja a:hover { text-decoration: none; }
+			footer .content-lojas .loja:hover { background: #000000; border-color: #000000; }
+			footer .content-lojas .loja:hover a h3 { color: #e61111; }
+
+	/* Newsletter */
+	.facebook-footer { background: url(images/bg-facebook-footer.png) no-repeat center bottom #0e578f; height: 414px; }
+	.facebook-footer h2 { font-size: 24px; color: #FFFFFF; text-transform: uppercase; padding-top: 100px; }
+
+		/* Form */
+		.facebook-footer .form { margin-left: 0; }
+		.facebook-footer .form form { margin-top: 60px; }
+		.facebook-footer .form .dado.grid.colunas-03 { margin-left: 0; }
+		.facebook-footer .form .dado.grid.colunas-09 { min-width: 239px; }
+		.facebook-footer .form .campo { border: 1px solid #f1f5f8; padding: 20px; }
+		.facebook-footer .form .campo.submit { background: #ffffff; padding: 0; }
+		.facebook-footer .form .campo.submit input { border: 0; display: inline-block; padding: 22.5px 26px; background: #ffffff; color: #0e578f; font-weight: bold; text-align: center; }
+		/*.newsletter .form input[type="submit"] { background: #ffffff; color: #0e578f; font-size: 14px; padding: 10px 20px; display: block; border: 0; margin-top: 0; }*/
+
+	/* Assinatura */
+	.facebook-footer .assinatura { margin-top: 35px; }
+
+
+/************ Menu > Plugin *************/
+#sb-site, .sb-site-container { padding: 14px; }
+.sb-slidebar { padding: 14px; color: #fff; }
+html.sb-active #sb-site, .sb-toggle-left, .sb-toggle-right, .sb-open-left, .sb-open-right, .sb-close { cursor: pointer; }
+
+/* Fixed position examples */
+#sb-site.top-padding { padding-top: 50px; }
+#fixed-top { position: fixed; top: 0; width: 100%; height: 50px; background-color: red; z-index: 4; }
+#fixed-top span.sb-toggle-left { float: left; color: white; padding: 10px; }
+#fixed-top span.sb-toggle-right { float: right; color: white; padding: 10px; z-index: 9999; }
+
+
+/* Page template */
+body.page { background: #eaeaea; }
+body.page article { padding: 50px 0; }
+
+	/* Title */
+	body.page .content-tit {}
+	body.page .content-tit .tit-page { background: #e61111; }
+	body.page .content-tit .tit-page h1 { color: #ffffff; font-size: 31px; display: block; padding: 150px; margin: 0; text-align: center; line-height: 36px; }
+
+	/* Line */
+	body.page .line {}
+	body.page .line .item { min-height: 377px; min-width: 495px; display: block; margin: 0; position: relative; }
+	body.page .line .item img { width: 100%; }
+	body.page .line .item .description { max-width: 350px; }
+	body.page .line .item .description p { font-size: 14px; color: #525151; margin-top: 70px; }
+	body.page .line .item .description h2 { margin-top: 70px; font-size: 30px; color: #525151; text-transform: uppercase; line-height: 35px; }
+	body.page .line .item .description .saiba-mais { margin-top: 45px; font-size: 14px; color: #ffffff; display: inline-block; background: #e61111; padding: 15px 20px; text-decoration: none; text-transform: uppercase; }
+
+		/* Search */
+		body.page .line .item .search { display: block; padding: 20px; width: 100%; background: #0e578f; position: absolute; bottom: 0; box-sizing: border-box; }
+
+		/* Right */
+		body.page .line .item.alignRight,
+		body.page .line .item.alignRight .description,
+		body.page .line .item.alignRight .description p,
+		body.page .line .item.alignRight .description h2,
+		body.page .line .item.alignRight .description .saiba-mais { text-align: right; float: right; }
+
+	/* Footer */
+	.before_footer { background: #0e578f; min-height: 205px; border-bottom: 10px solid #FFFFFF; }
+	.before_footer .item {}
+	.before_footer .item a { font-size: 18px; color: #ffffff; text-decoration: none; display: block; width: 100%; text-align: center; padding: 110px 15px; }
+
+		/* Itens */
+		.before_footer .item.lojas { background: url(images/bg-lojas.png) no-repeat; height: 206px; }
+		.before_footer .item.troca { background: url(images/bg-troca.png) no-repeat; height: 206px; }
+		.before_footer .item.recarga { background: url(images/bg-recarga.png) no-repeat; height: 206px; }
+
+
+
+
+
+
+
+
+
+
+
+

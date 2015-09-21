@@ -12,8 +12,8 @@ Text Domain: branndon
 */
 
 /* Gerais */
-* { margin: 0; outline: none; padding: 0; transition: all 0.5s ease-in; }
-body { background: #CCC; font-family: Arial; margin: 0; padding: 0; }
+* { margin: 0; outline: none; padding: 0; } /** transition: all 0.5s ease-in; **/
+body { background: #FFFFFF; font-family: Arial; margin: 0; padding: 0; }
 section { margin: 0 auto; width: 990px; }
 figure { clear: both; margin: 0; }
 ::selection { background: #000; color: #FFF; }
@@ -23,7 +23,7 @@ label,
 input[type="submit"] { cursor: pointer; }
 button[type="submit"] { position: relative; }
 a img { border: none; }
-main { padding: 30px 0; }
+/*main { padding: 30px 0; }*/
 article { background: #FFF; padding: 20px; }
 
 /* Padrões de formatação */
@@ -93,8 +93,8 @@ nav ul.menu li.current-category-ancestor a { background: #666; color: #EEE; }
 nav ul.menu li:hover a { background: #111; color: #DDD; }
 
 /* Footer */
-footer { background: #111; padding: 30px 0; }
-footer h3 { border-bottom: solid 1px; color: #EEE; font-size: 26px; line-height: 29px; }
+footer { background: #e61111; padding: 0; }
+/*footer h3 { border-bottom: solid 1px; color: #EEE; font-size: 26px; line-height: 29px; }*/
 footer p { color: #EEE; font-size: 12px; line-height: 15px; margin-top: 30px; word-wrap: break-word; }
 footer p:first-child { margin-top: 0; }
 footer a { color: #AAA; text-decoration: none; }
@@ -252,15 +252,15 @@ form .bloco .dado { margin-bottom: 5px; margin-top: 5px; }
 form .bloco .dado p { margin-top: 0; }
 form .bloco .dado label,
 form .bloco .dado span { color: #666; font-size: 13px; line-height: 13px; margin-bottom: 5px; }
-form .bloco .dado .campo { background: #EEE; border-radius: 5px; padding: 5px; }
+/*form .bloco .dado .campo { background: #EEE; border-radius: 5px; padding: 5px; }*/
 form .bloco .dado .campo input[type="text"],
 form .bloco .dado .campo select,
 form .bloco .dado .campo textarea { background: none; border-style: none; width: 100%; }
 form .bloco .dado .campo textarea { height: 50px; resize: none; }
 form .bloco .dado .campo input[type="checkbox"] { margin: 0 5px 0 30px; }
 form .bloco .dado .campo input[type="checkbox"]:first-child { margin-left: 0; }
-form .bloco .dado input[type="submit"] { background: #444; border: none; border-radius: 5px; color: #FFF; float: right; font-size: 13px; font-weight: bold; line-height: 13px; padding: 11px 16px; text-transform: uppercase; }
-form .bloco .dado input[type="submit"]:hover { background: #111; }
+/*form .bloco .dado input[type="submit"] { background: #444; border: none; border-radius: 5px; color: #FFF; float: right; font-size: 13px; font-weight: bold; line-height: 13px; padding: 11px 16px; text-transform: uppercase; }*/
+/*form .bloco .dado input[type="submit"]:hover { background: #111; }*/
 
 /* Palco */
 .palco { float: left; margin-left: 30px; }

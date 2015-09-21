@@ -7,29 +7,49 @@
 get_header(); ?>
 <section>
 	
-	<div class="palco colunas-08">
-		<article>
-			<?php
-				echo '<h1>' . get_the_title() . '</h1>';
+	<article>
+		<div class="line content-tit">
+			<div class="tit-page grid colunas-06 item">
+				<h1 class="rubrik"><?php the_title(); ?></h1>
+			</div>
+			<div class="grid colunas-06 item">
+				<img src="<?php bloginfo( 'template_directory'); ?>/images/servicos/encontre-o-servivo-mais-rapido.png" alt="" />
+				<div class="search">
+					<!-- search form -->
+				</div>
+			</div>
+		</div>
 
-				the_content();
+		<figure></figure>
 
-				if( get_post_meta( get_the_ID(), '_galeria', true ) == 'on' )
-					listar_galeria( get_the_ID() );
+		<div class="line">
+			<div class="grid colunas-06 item">
+				<div class="description">
+					<?php  while ( have_posts() ) : the_post(); ?>
+						<?php the_content(); ?>
+					<?php endwhile; ?>
+				</div>
+			</div>
+			<div class="grid colunas-06 item">
+				
+			</div>
+		</div>
 
-				if( get_post_meta( get_the_ID(), '_comentario', true ) == 'on' )
-					echo '
-						<div class="comentarios">
-							<div class="fb-comments" data-width="610" data-href="' . get_bloginfo( 'url' ) . '" data-numposts="5" data-colorscheme="light"></div>
-						</div>
-					';
-			?>
-		</article>
-	</div>
+		<figure></figure>
 
-	<div class="palco colunas-04">
-		<?php dynamic_sidebar( 'sidebar' ); ?>
-	</div>
+	</article>
 	
 </section>
 <?php get_footer(); ?>
+
+
+
+
+
+
+
+
+
+
+
+
