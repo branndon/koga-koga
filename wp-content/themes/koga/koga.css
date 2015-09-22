@@ -80,7 +80,7 @@ header { background: #e61111; border-bottom: 6px solid #b30d0d; padding: 30px 0;
 
 	/* Menu > right */
 	.content-menu {}
-	.content-menu ul { float: left; width: 100%; }
+	.content-menu ul { width: 100%; }
 	.content-menu ul li { display: block; width: 100%; position: relative; }
 	.content-menu ul li a { color: #FFFFFF; text-decoration: none; padding: 35px; display: block; text-transform: uppercase; }
 	.content-menu ul li a:before { color: #1c4e73; content: '■'; margin-right: 35px; }
@@ -107,10 +107,11 @@ header { background: #e61111; border-bottom: 6px solid #b30d0d; padding: 30px 0;
 	.content-slider .bxslider li { min-height: 848px; }
 
 		/* Description */
-		.content-slider .bxslider li .subtitle { background: rgba(0, 0, 0, 0.60); border-bottom: 10px solid #dedede; display: inline-block; padding: 80px 40px; max-width: 430px; margin-top: 170px; }
+		.content-slider .bxslider li .subtitle { background: rgba(0, 0, 0, 0.60); border-bottom: 10px solid #dedede; display: inline-block; padding: 80px 40px; max-width: 430px; margin-top: 170px; position: relative; }
 		.content-slider .bxslider li .subtitle:before { display: none; }
+		.content-slider .bxslider li .subtitle:after { content: ' '; bottom: -10px; left: 0; width: 50px; height: 10px; background: #b92c2c; position: absolute; }
 		.content-slider .bxslider li .subtitle p { font-size: 22px; color: #ffffff; font-style: lighter; line-height: 27px; }
-		.content-slider .bxslider li .subtitle h2 { font-size: 27px; color: #e61111; text-transform: uppercase; }
+		.content-slider .bxslider li .subtitle h2 { font-size: 27px; color: #e61111; text-transform: uppercase; margin-top: 0; }
 
 	/* Fix btns */
 	.fix-btns { max-width: 55px; position: fixed; right: 0; z-index: 9999; }
@@ -243,8 +244,9 @@ body.page article { padding: 50px 0; }
 	/* Line */
 	body.page .line {}
 	body.page .line .item { min-height: 377px; min-width: 495px; display: block; margin: 0; position: relative; }
+	body.page .line .item h2.sub-tit { color: #e61111; padding: 90px 100px; text-transform: uppercase; font-size: 25px; line-height: 30px; }
 	body.page .line .item img { width: 100%; }
-	body.page .line .item .description { max-width: 350px; }
+	body.page .line .item .description { }
 	body.page .line .item .description p { font-size: 14px; color: #525151; margin-top: 70px; }
 	body.page .line .item .description h2 { margin-top: 70px; font-size: 30px; color: #525151; text-transform: uppercase; line-height: 35px; }
 	body.page .line .item .description .saiba-mais { margin-top: 45px; font-size: 14px; color: #ffffff; display: inline-block; background: #e61111; padding: 15px 20px; text-decoration: none; text-transform: uppercase; }
@@ -269,6 +271,8 @@ body.page article { padding: 50px 0; }
 		.before_footer .item.troca { background: url(images/bg-troca.png) no-repeat; height: 206px; }
 		.before_footer .item.recarga { background: url(images/bg-recarga.png) no-repeat; height: 206px; }
 
+/* Page: Serviços */
+body.page-id-19 .line .item .description { max-width: 350px; }
 
 
 

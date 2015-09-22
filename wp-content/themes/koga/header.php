@@ -95,7 +95,7 @@
 
     		<figure></figure>
 
-			<?php wp_nav_menu( array( 'menu' => 'main menu' ) ); ?>
+			<?php wp_nav_menu( array( 'menu' => 'Menu Principal' ) ); ?>
 
     	</div>
     </div>
@@ -125,17 +125,17 @@
 				<div class="palco colunas-07 floatRight">
 					<ul class="main-menu">
 						<li>
-							<a href="#">
+							<a href="<?php bloginfo( 'url' ); ?>/servicos/troca-de-oleo/">
 							<i class="icon oleo"></i>
 							troca de óleo</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="<?php bloginfo( 'url' ); ?>/servicos">
 							<i class="icon servicos"></i>
 							Serviços</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="<?php bloginfo( 'url' ); ?>/lojas">
 							<i class="icon lojas"></i>
 							Lojas</a>
 						</li>

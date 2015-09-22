@@ -14,10 +14,10 @@
 						<a href="<?php bloginfo( 'url' ); ?>/lojas" class="rubrik">nossas lojas</a>
 					</div>
 					<div class="palco colunas-04 item troca">
-						<a href="<?php bloginfo( 'url' ); ?>/troca-de-oleo" class="rubrik">troca de grátis</a>
+						<a href="<?php bloginfo( 'url' ); ?>/servicos/troca-de-oleo" class="rubrik">troca de grátis</a>
 					</div>
 					<div class="palco colunas-04 item recarga">
-						<a href="<?php bloginfo( 'url' ); ?>/recarga-computadorizada" class="rubrik">recarga computadorizada</a>
+						<a href="<?php bloginfo( 'url' ); ?>/servicos/recarga-computadorizada" class="rubrik">recarga computadorizada</a>
 					</div>
 				</section>
 			</div>

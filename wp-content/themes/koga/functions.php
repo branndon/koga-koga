@@ -468,30 +468,6 @@ function campos_slider_produto() { add_meta_box( 'meta_slider', 'Destaque', 'for
 function form_slider() { global $meta_slider; gera_formulario( $meta_slider ); }
 function salvar_slider( $post_id ) { global $meta_slider; configurar_salvamento( $meta_slider, $post_id ); } add_action( 'save_post', 'salvar_slider' );
 
-$meta_galeria = array(
-
-	array(
-		'label'			=> 'Adicionar',
-		'desc'			=> 'Esta publicação deve exibir uma galeria após o conteúdo principal?',
-		'id'			=> '_galeria',
-		'type'			=> 'checkbox',
-	),
-
-	array(
-		'label'			=> 'Comentarios',
-		'desc'			=> 'Esta publicação deve exibir um box para comentários do Facebook?',
-		'id'			=> '_comentario',
-		'type'			=> 'checkbox',
-	)
-
-);
-
-function campos_galeria_post() { add_meta_box( 'meta_galeria', 'Galeria & Comentários', 'form_galeria', 'post', 'side', 'high' ); } add_action( 'add_meta_boxes', 'campos_galeria_post' );
-function campos_galeria_page() { add_meta_box( 'meta_galeria', 'Galeria & Comentários', 'form_galeria', 'page', 'side', 'high' ); } add_action( 'add_meta_boxes', 'campos_galeria_page' );
-function campos_galeria_produto() { add_meta_box( 'meta_galeria', 'Galeria & Comentários', 'form_galeria', 'produto', 'side', 'high' ); } add_action( 'add_meta_boxes', 'campos_galeria_produto' );
-function form_galeria() { global $meta_galeria; gera_formulario( $meta_galeria ); }
-function salvar_galeria( $post_id ) { global $meta_galeria; configurar_salvamento( $meta_galeria, $post_id ); } add_action( 'save_post', 'salvar_galeria' );
-
 /* Funções personalizadas */
 
 function mapa_do_site() {

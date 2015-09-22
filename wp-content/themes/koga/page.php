@@ -13,10 +13,11 @@ get_header(); ?>
 				<h1 class="rubrik"><?php the_title(); ?></h1>
 			</div>
 			<div class="grid colunas-06 item">
-				<img src="<?php bloginfo( 'template_directory'); ?>/images/servicos/encontre-o-servivo-mais-rapido.png" alt="" />
-				<div class="search">
-					<!-- search form -->
-				</div>
+				<h2 class="rubrik_bold sub-tit">
+					Koga Koga<br/>
+					Tradição e Respeito<br/>
+					ao cliente
+				</h2>	
 			</div>
 		</div>
 
